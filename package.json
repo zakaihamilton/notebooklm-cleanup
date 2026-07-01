@@ -1,0 +1,28 @@
+{
+  "name": "notebooklm-cleanup",
+  "version": "1.0.0",
+  "description": "Delete the 100 least-recently-used notebooks from a Google NotebookLM account",
+  "type": "module",
+  "scripts": {
+    "cleanup": "tsx cleanup.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "notebooklm",
+    "cleanup"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "notebooklm-kit": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "@vitest/coverage-v8": "^4.1.9",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  }
+}

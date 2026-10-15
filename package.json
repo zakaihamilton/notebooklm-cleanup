@@ -1,4 +1,5 @@
 {
+  "packageManager": "pnpm@10.33.0",
   "name": "notebooklm-cleanup",
   "version": "1.0.0",
   "description": "Delete the 100 least-recently-used notebooks from a Google NotebookLM account",

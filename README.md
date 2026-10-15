@@ -14,20 +14,20 @@ This CLI connects to NotebookLM via [`notebooklm-kit`](https://www.npmjs.com/pac
 ## Setup
 
 ```bash
-npm install
+pnpm install
 cp .env.example .env
 ```
 
 Authentication options (pick one):
 
-1. **Interactive browser login (default)** — run `npm run cleanup` with no credentials configured. The script launches your installed **Google Chrome** directly (not an automated test browser) and connects over remote debugging, which avoids Google’s “browser may not be secure” block. Sign in normally, wait for the notebook list to load, and credentials are saved to `credentials.json`.
+1. **Interactive browser login (default)** — run `pnpm run cleanup` with no credentials configured. The script launches your installed **Google Chrome** directly (not an automated test browser) and connects over remote debugging, which avoids Google’s “browser may not be secure” block. Sign in normally, wait for the notebook list to load, and credentials are saved to `credentials.json`.
 2. **Auto-login** — set `GOOGLE_EMAIL` and `GOOGLE_PASSWORD` in `.env` (accounts without 2FA). Use `GOOGLE_HEADLESS=false` if you need to complete extra verification in the browser.
 3. **Manual tokens** — set `NOTEBOOKLM_AUTH_TOKEN` and `NOTEBOOKLM_COOKIES` in `.env` from browser DevTools.
 
 ## Usage
 
 ```bash
-npm run cleanup
+pnpm run cleanup
 ```
 
 On the first run without saved credentials, Google Chrome opens to NotebookLM. Sign in with your normal Google account and wait until the notebook list loads. The script saves `credentials.json` and reuses it on future runs.
@@ -54,8 +54,8 @@ Type `delete` in any casing (`delete`, `DELETE`, `Delete`) to proceed. Any other
 ## Testing
 
 ```bash
-npm test
-npm run test:coverage
+pnpm test
+pnpm run test:coverage
 ```
 
 Component tests cover notebook selection, table formatting, confirmation logic, and the orchestration pipeline with a mocked SDK.
